@@ -1,4 +1,10 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+
+export PYBUILD_NAME=geojson
 
 %:
-	dh $@
+	dh  $@ --with python3 --buildsystem pybuild
